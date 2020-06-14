@@ -22,8 +22,14 @@ class CrudServicio{
         $Insert->bindValue('Operario2',$Servicio->getOperario2());
 
         try{
-            $Insert->execute();//ejecutar el insert
-                Echo " Registro exitoso";
+            $Insert->execute();
+                //Echo " Registro exitoso";
+                ?>
+                <script>
+                alert("Servicio registrado con éxito");
+                document.location.href="../Vista/IngresarServicio.php";
+                </script>
+                <?php
 
             } catch (Exception $e)
             {
@@ -44,7 +50,7 @@ class CrudServicio{
                 $MyServicio = new Servicio();
                 $MyServicio->setIdServicio($Servicio['IdServicio']);
                 $MyServicio->setNombreObra($Servicio['NombreObra']);
-                $MyServicio->setDirectorobra($Servicio['Directorobra']);
+                $MyServicio->setDirectorObra($Servicio['DirectorObra']);
                 $MyServicio->setConstructora($Servicio['Constructora']);
                 $MyServicio->setMes($Servicio['Mes']);
                 $MyServicio->setMaquina($Servicio['Maquina']);
@@ -66,7 +72,7 @@ class CrudServicio{
                     $Servicio = $Sql->fetch(); //Se almacena la variable $competencia los datos de la variabale $sql
                     $MyServicio->setIdServicio($Servicio['IdServicio']);
                     $MyServicio->setNombreObra($Servicio['NombreObra']);
-                    $MyServicio->setDirectorobra($Servicio['Directorobra']);
+                    $MyServicio->setDirectorObra($Servicio['DirectorObra']);
                     $MyServicio->setConstructora($Servicio['Constructora']);
                     $MyServicio->setMes($Servicio['Mes']);
                     $MyServicio->setMaquina($Servicio['Maquina']);
@@ -97,7 +103,13 @@ class CrudServicio{
                 $Sql->bindValue('Operario2',$Servicio->getOperario2());
                 try{
                     $Sql->execute(); //Ejecutar el slq que contiene un update
-                    echo "Modificacion exitosa";
+                    //echo "Modificacion exitosa";
+                    ?>
+                    <script>
+                    alert("Servicio modificado con éxito");
+                    document.location.href="../Vista/ListarServicio.php";
+                    </script>
+                    <?php
                 }
                 catch(Exception $e){ //Capturar Errores
                     echo $e->getMessage(); //Mostrar errores en la modificaion
@@ -112,7 +124,13 @@ class CrudServicio{
                 $Sql->bindValue('IdServicio',$IdServicio);
                 try{
                     $Sql->execute(); //Ejecutar el slq que contiene un update
-                    echo "Eliminacion exitosa";
+                    //echo "Eliminacion exitosa";
+                    ?>
+                    <script>
+                    alert("Servicio eliminado con éxito");
+                    document.location.href="../Vista/ListarServicio.php";
+                    </script>
+                    <?php
                 }
                 catch(Exception $e){ //Capturar Errores
                     echo $e->getMessage(); //Mostrar errores en la modificaion

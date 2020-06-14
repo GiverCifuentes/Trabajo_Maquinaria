@@ -40,7 +40,6 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
             Id de la obra:
             <br>
             <input type="text" readonly value="<?php echo $Servicio->getIdServicio();?>">
-            <label id="validacion_nombreempresa"></label>
             <br>
         </div>
         <div class="form-group"style="text-align:center;">

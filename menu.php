@@ -10,6 +10,6 @@ if(!(isset($_SESSION["NombreUsuario"]))){ //Si la session no exite redireccionar
 <br>
 <a href="Servicio/Vista/ListarServicio.php">Gestión de Servicio</a>
 <br>
-<a href="#">Gestión de Maquinaria</a>
+<a href="Maquinaria/Vista/ListarMaquinaria.php">Gestión de Maquinaria</a>
 <br>
 <a href="CerrarSesion.php">Cerrar Sesión</a>

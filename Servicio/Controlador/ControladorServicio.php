@@ -21,7 +21,7 @@ if (isset($_POST["CrearServicio"])) {
 
 else if(isset($_POST["EditarServicio"])) {
 
-    $Servicio->setIdServicio(null);
+    $Servicio->setIdServicio($_POST["IdServicio"]);
     $Servicio->setNombreObra($_POST["NombreObra"]);
     $Servicio->setDirectorObra($_POST["DirectorObra"]);
     $Servicio->setConstructora($_POST["Constructora"]);

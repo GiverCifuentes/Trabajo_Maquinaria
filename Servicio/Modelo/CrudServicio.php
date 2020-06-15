@@ -91,9 +91,10 @@ class CrudServicio{
             public function ModificarServicio($Servicio)
             {
                 $Db = Db::Conectar(); //Conectar a la base de datos
-                $Sql = $Db->prepare('UPDATE servicio SET IdServicio=:IdServicio, NombreObra=:NombreObra,
+                $Sql = $Db->prepare('UPDATE servicio SET NombreObra=:NombreObra,
                 DirectorObra=:DirectorObra, Constructora=:Constructora, Mes=:Mes,
                 Maquina=:Maquina, Operario1=:Operario1, Operario2=:Operario2 WHERE IdServicio=:IdServicio');
+                $Sql->bindValue('IdServicio',$Servicio->getIdServicio());
                 $Sql->bindValue('NombreObra',$Servicio->getNombreObra());
                 $Sql->bindValue('DirectorObra',$Servicio->getDirectorObra());
                 $Sql->bindValue('Constructora',$Servicio->getConstructora());
@@ -103,7 +104,7 @@ class CrudServicio{
                 $Sql->bindValue('Operario2',$Servicio->getOperario2());
                 try{
                     $Sql->execute(); //Ejecutar el slq que contiene un update
-                    //echo "Modificacion exitosa";
+                    echo "Modificacion exitosa Crud Servicio";
                     ?>
                     <script>
                     alert("Servicio modificado con éxito");
@@ -117,7 +118,7 @@ class CrudServicio{
                 }
             }
 
-            public function EliminarServicio($Servicio)
+            public function EliminarServicio($IdServicio)
             {
                 $Db = Db::Conectar(); //Conectar a la base de datos
                 $Sql = $Db->prepare('DELETE FROM servicio WHERE IdServicio=:IdServicio');

@@ -39,7 +39,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
         <div class="form-group"style="text-align:center;">
             Id de la obra:
             <br>
-            <input type="text" readonly value="<?php echo $Servicio->getIdServicio();?>">
+            <input type="text" id="IdServicio" name="IdServicio" readonly value="<?php echo $Servicio->getIdServicio();?>">
             <br>
         </div>
         <div class="form-group"style="text-align:center;">

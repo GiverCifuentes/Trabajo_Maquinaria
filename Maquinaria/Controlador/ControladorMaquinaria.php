@@ -16,7 +16,7 @@ if(isset($_POST["CrearMaquinaria"])){
 
 else if(isset($_POST["EditarMaquinaria"])){
 
-    $Maquinaria->setIdMaquina(null);
+    $Maquinaria->setIdMaquina($_POST["IdMaquina"]);
     $Maquinaria->setNombre($_POST["Nombre"]);
     $Maquinaria->setCapacidad($_POST["Capacidad"]);
     $CrudMaquinaria::ModificarMaquinaria($Maquinaria);

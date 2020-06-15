@@ -74,8 +74,9 @@ class CrudMaquinaria{
     public function ModificarMaquinaria($Maquinaria)
             {
                 $Db = Db::Conectar(); //Conectar a la base de datos
-                $Sql = $Db->prepare('UPDATE Maquinaria SET IdMaquina=:IdMaquina, Nombre=:Nombre,
+                $Sql = $Db->prepare('UPDATE Maquinaria SET Nombre=:Nombre,
                 Capacidad=:Capacidad WHERE IdMaquina=:IdMaquina');
+                $Sql->bindValue('IdMaquina',$Maquina->getIdMaquina());
                 $Sql->bindValue('Nombre',$Maquinaria->getNombre());
                 $Sql->bindValue('Capacidad',$Maquinaria->getCapacidad());
                 try{
@@ -94,7 +95,7 @@ class CrudMaquinaria{
                 }
             }
 
-            public function EliminarMaquinaria($Maquinaria)
+            public function EliminarMaquinaria($IdMaquina)
             {
                 $Db = Db::Conectar(); //Conectar a la base de datos
                 $Sql = $Db->prepare('DELETE FROM maquinaria WHERE IdMaquina=:IdMaquina');

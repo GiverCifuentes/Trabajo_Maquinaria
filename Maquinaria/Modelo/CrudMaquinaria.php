@@ -13,8 +13,8 @@ class CrudMaquinaria{
 
         $Insert = $Db->prepare('INSERT INTO maquinaria VALUES(:IdMaquina,:Nombre,:Capacidad)');
         $Insert->bindValue('IdMaquina',$Maquinaria->getIdMaquina());
-        $Insert->bindValue('NombreObra',$Maquinaria->getNombre());
-        $Insert->bindValue('DirectorObra',$Maquinaria->getCapacidad());
+        $Insert->bindValue('Nombre',$Maquinaria->getNombre());
+        $Insert->bindValue('Capacidad',$Maquinaria->getCapacidad());
 
         try{
             $Insert->execute();
@@ -22,7 +22,7 @@ class CrudMaquinaria{
                 ?>
                 <script>
                 alert("Maquina registrada con éxito");
-                document.location.href="../Vista/IngresarMaquinaria.php";
+                document.location.href="../Vista/ListarMaquinaria.php";
                 </script>
                 <?php
 
@@ -76,7 +76,7 @@ class CrudMaquinaria{
                 $Db = Db::Conectar(); //Conectar a la base de datos
                 $Sql = $Db->prepare('UPDATE Maquinaria SET Nombre=:Nombre,
                 Capacidad=:Capacidad WHERE IdMaquina=:IdMaquina');
-                $Sql->bindValue('IdMaquina',$Maquina->getIdMaquina());
+                $Sql->bindValue('IdMaquina',$Maquinaria->getIdMaquina());
                 $Sql->bindValue('Nombre',$Maquinaria->getNombre());
                 $Sql->bindValue('Capacidad',$Maquinaria->getCapacidad());
                 try{
@@ -84,7 +84,7 @@ class CrudMaquinaria{
                     //echo "Modificacion exitosa";
                     ?>
                     <script>
-                    alert("Máquina modificado con éxito");
+                    alert("Máquina modificada con éxito");
                     document.location.href="../Vista/ListarMaquinaria.php";
                     </script>
                     <?php
@@ -105,7 +105,7 @@ class CrudMaquinaria{
                     //echo "Eliminacion exitosa";
                     ?>
                     <script>
-                    alert("Maquina eliminado con éxito");
+                    alert("Máquina eliminada con éxito");
                     document.location.href="../Vista/ListarMaquinaria.php";
                     </script>
                     <?php

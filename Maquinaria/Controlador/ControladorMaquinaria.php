@@ -24,7 +24,7 @@ else if(isset($_POST["EditarMaquinaria"])){
 
 else if ($_GET['Accion']== "EliminarMaquinaria") {
 
-    $CrudMaquinaria::EliminarMaquinaria($_GET["IdMaquinaria"]);
+    $CrudMaquinaria::EliminarMaquinaria($_GET["IdMaquina"]);
 }
 
 

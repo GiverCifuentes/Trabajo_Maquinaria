@@ -99,6 +99,9 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
           <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='practicacrud/navegar.php'"> Volver</button> -->
     </form>
 
+    <button  class="btn btn-secondary" onclick="location.href='ListarServicio.php'"> Volver</button>
+
+
     <footer>
       <div class="footer" style="margin-top: 5rem; color: black;">
         <i><b>GIVER CIFUENTES.</b></i>

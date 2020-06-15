@@ -45,7 +45,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
         <div class="form-group"style="text-align:center;">
         Nombre de la máquina:
         <br>
-        <input title="escriba aca el nombre de la empresa" type="text" id="Nombre" name="Nombre" value="<?php echo $Maquinaria->getNombre();?>">
+        <input type="text" id="Nombre" name="Nombre" value="<?php echo $Maquinaria->getNombre();?>">
         <label id="validacion_nombre"></label>
         <br>
         </div>
@@ -57,12 +57,14 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
         <br>
         </div>
 
-        <input type="hidden" name="CrearMaquinaria" id="CreaMaquinaria">
+        <input type="hidden" name="EditarMaquinaria" id="EditarMaquinaria">
         <button type="submit"  class="btn btn-secondary" name="btnregistrar_Maquinaria" id="btnregistrar_Maquinaria ">Editar Máquina</button>
         <!-- <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
         <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button>
         <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='practicacrud/navegar.php'"> Volver</button> -->
     </form>
+    <button  class="btn btn-secondary" onclick="location.href='ListarMaquinaria.php'"> Volver</button>
+
 
     <footer>
       <div class="footer" style="margin-top: 5rem; color: black;">

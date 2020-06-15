@@ -37,6 +37,7 @@
         <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button>
         <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='practicacrud/navegar.php'"> Volver</button> -->
     </form>
+    <button  class="btn btn-secondary" onclick="location.href='ListarMaquinaria.php'"> Volver</button>
 
     <footer>
       <div class="footer" style="margin-top: 5rem; color: black;">

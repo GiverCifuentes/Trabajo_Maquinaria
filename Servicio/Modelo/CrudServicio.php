@@ -27,7 +27,7 @@ class CrudServicio{
                 ?>
                 <script>
                 alert("Servicio registrado con éxito");
-                document.location.href="../Vista/IngresarServicio.php";
+                document.location.href="../Vista/ListarServicio.php";
                 </script>
                 <?php
 

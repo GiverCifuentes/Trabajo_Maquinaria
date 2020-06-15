@@ -28,7 +28,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
 <body style="background-color: rgb(0, 0, 0);">
 
     <div style="background-color: #B52407;" class="card text-white mb-3">
-        <div class="card-header">Ingrese los datos para xxxxx</div>
+        <div class="card-header">Ingrese los datos para registrar un servicio</div>
         <div class="card-body">
     <form id="FrmServicio" name="FrmServicio" action="../Controlador/ControladorServicio.php" method="POST">
         <div class="form-group"style="text-align:center;">
@@ -92,10 +92,11 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
 
           <input type="hidden" name="CrearServicio" id="CreaServicio">
           <button type="submit"  class="btn btn-success" name="btnregistrar_servicio" id="btnregistrar_servicio ">Registrar</button>
-          <!-- <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
-          <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button> -->
-          
+          <!-- <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button> -->
     </form>
+      <!-- <br>
+      <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
+      <br> -->
     <br>
     <button  class="btn btn-info" onclick="location.href='ListarServicio.php'"> Volver</button>
 
@@ -109,5 +110,5 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
 </div>
 
 </body>
-<!-- <script src="../../js/Maquinaria/Maquinaria.js"></script> -->
+<!-- <script src="../../js/Servicio/IngresarServicio.js"></script> -->
 </html>

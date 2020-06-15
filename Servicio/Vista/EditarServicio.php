@@ -93,13 +93,13 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
           </div>
 
           <input type="hidden" name="EditarServicio" id="EditarServicio">
-          <button type="submit"  class="btn btn-secondary" name="btneditar_servicio" id="btneditar_servicio ">Editar Servicio</button>
+          <button type="submit"  class="btn btn-success" name="btneditar_servicio" id="btneditar_servicio ">Editar Servicio</button>
           <!-- <button  class="btn btn-secondary" name="btnlimpiar" id="btnlimpiar">Limpiar</button>
           <button  class="btn btn-secondary" name="btnconsultar_maquina" id="btnconsultar_maquina">Consultar</button>
           <button  class="btn btn-secondary" name="btnVolver" id="btnVolver" onclick="location.href='practicacrud/navegar.php'"> Volver</button> -->
     </form>
-
-    <button  class="btn btn-secondary" onclick="location.href='ListarServicio.php'"> Volver</button>
+    <br>
+    <button  class="btn btn-info" onclick="location.href='ListarServicio.php'"> Volver</button>
 
 
     <footer>

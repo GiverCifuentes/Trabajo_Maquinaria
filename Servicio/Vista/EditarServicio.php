@@ -73,7 +73,16 @@ $mysqli = new mysqli('localhost', 'root', '', 'trabajo_maquinaria');
           <div class="form-group"style="text-align:center;">
             Máquina:
             <br>
-            <input id="Maquina" name="Maquina" value="<?php echo $Servicio->getMaquina();?>">
+            <!-- <input id="Maquina" name="Maquina"> -->
+            <select id="Maquina"  name= "Maquina" value="<?php echo $Servicio->getMaquina();?> class="form-control">
+                              <option value="0" >Seleccione una Maquina</option>
+                              <?php
+                              $query = $mysqli -> query ("SELECT * FROM maquinaria");
+                              while ($valores = mysqli_fetch_array($query)) {
+                              echo '<option style="color:black;" value="'.$valores[IdMaquina].'">'.$valores[Nombre].'</option>';
+                              }
+                              ?>
+            </select>
             <label id="validacion_maquina"></label>
             <br>
           </div>

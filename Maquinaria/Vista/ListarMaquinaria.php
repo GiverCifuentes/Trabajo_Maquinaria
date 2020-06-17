@@ -44,8 +44,8 @@ $ListaMaquinaria = $CrudMaquinaria->ListarMaquinaria();
                     <th scope="col">Id Maquina</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Capacidad</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Eliminar</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                     </tr>
             </thead>
             <tbody>
